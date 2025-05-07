@@ -1,0 +1,233 @@
+{% extends "layout.html" %}
+
+{% block title %}Contact Us - Tech Solutions Inc{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" style="height: 50vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center hero-content">
+                <h1 class="hero-title slide-up">Contact Us</h1>
+                <p class="hero-subtitle slide-up">Get in touch with our team to discuss your technology needs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mb-5 mb-lg-0 animate-on-scroll" data-animation="fade-in">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="mb-4">We're here to help with your technology needs. Fill out the form and one of our experts will get back to you shortly, or use the contact information below to reach us directly.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h5>Our Location</h5>
+                            <p>123 Tech Street, Silicon Valley, CA 94043</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5>Email Address</h5>
+                            <p>info@techsolutions.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h5>Business Hours</h5>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday - Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links mt-4">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-7 animate-on-scroll" data-animation="slide-up">
+                <div class="services-card">
+                    <h3 class="mb-4">Send Us a Message</h3>
+                    
+                    <form id="contactForm" action="{{ url_for('contact') }}" method="post" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" 
+                                           placeholder="Your name" value="{{ form_data.get('name', '') }}" required>
+                                    <div class="invalid-feedback">Please enter your name</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" 
+                                           placeholder="Your email" value="{{ form_data.get('email', '') }}" required>
+                                    <div class="invalid-feedback">Please enter a valid email address</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" 
+                                   placeholder="Subject of your message" value="{{ form_data.get('subject', '') }}" required>
+                            <div class="invalid-feedback">Please enter a subject</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" 
+                                      placeholder="Your message" required>{{ form_data.get('message', '') }}</textarea>
+                            <div class="invalid-feedback">Please enter your message</div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll" data-animation="fade-in">
+            <h2 class="section-title mx-auto">Our Location</h2>
+            <p class="lead">Visit our office or schedule a meeting with our team</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 animate-on-scroll" data-animation="fade-in">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.639290621064!2d-122.08375708469227!3d37.42199997982371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x29cdf01a44fc687f!2sGoogleplex!5e0!3m2!1sen!2sus!4v1628007759956!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll" data-animation="fade-in">
+            <h2 class="section-title mx-auto">Frequently Asked Questions</h2>
+            <p class="lead">Common questions about working with us</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto animate-on-scroll" data-animation="fade-in">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How quickly can you respond to a cybersecurity incident?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Our cybersecurity team is available 24/7 for emergency response. For clients with our managed security services, we begin addressing incidents as soon as they're detected. For new clients experiencing a security incident, we aim to initiate our response within 2-4 hours of your call, depending on the severity and nature of the incident.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Do you offer ongoing support for your software solutions?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Yes, we offer comprehensive support and maintenance packages for all our software solutions. These packages include bug fixes, security updates, performance optimization, and user support. We also offer various service level agreements (SLAs) to ensure that our support meets your specific business requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What industries do you specialize in?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>While we serve clients across various industries, we have particular expertise in healthcare, financial services, manufacturing, retail, and professional services. Our team understands the unique technology challenges and regulatory requirements of these industries, allowing us to deliver solutions that address specific industry needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How do you determine which technology solutions are right for my business?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>We begin with a comprehensive assessment of your current technology infrastructure, business goals, challenges, and budget. This allows us to understand your unique needs and recommend solutions that align with your objectives. We take a consultative approach, working closely with you to ensure that our recommendations address your specific requirements and provide tangible value to your business.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Do you offer training for the solutions you implement?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Yes, we provide comprehensive training for all the solutions we implement. We believe that technology is most effective when users understand how to utilize it properly. Our training programs are tailored to different user levels, from end-users to administrators, ensuring that everyone in your organization can make the most of the implemented solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-padding" style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+    <div class="container text-center text-white">
+        <h2 class="mb-4 animate-on-scroll" data-animation="fade-in">Ready to Discuss Your Technology Needs?</h2>
+        <p class="lead mb-4 animate-on-scroll" data-animation="fade-in">Our team of experts is ready to help you find the right technology solutions for your business.</p>
+        <a href="tel:1234567890" class="btn btn-light btn-lg me-2 animate-on-scroll" data-animation="fade-in"><i class="fas fa-phone me-2"></i> Call Us</a>
+        <a href="mailto:info@techsolutions.com" class="btn btn-outline-light btn-lg animate-on-scroll" data-animation="fade-in"><i class="fas fa-envelope me-2"></i> Email Us</a>
+    </div>
+</section>
+{% endblock %}

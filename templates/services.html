@@ -1,0 +1,252 @@
+{% extends "layout.html" %}
+
+{% block title %}Our Services - Tech Solutions Inc{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" style="height: 50vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center hero-content">
+                <h1 class="hero-title slide-up">Our Services</h1>
+                <p class="hero-subtitle slide-up">Comprehensive technology solutions tailored to your business needs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Introduction -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto text-center animate-on-scroll" data-animation="fade-in">
+                <h2 class="section-title mx-auto">How We Can Help Your Business</h2>
+                <p class="lead mb-5">At TechSolutions, we offer a comprehensive range of technology services designed to help businesses of all sizes harness the power of technology. Whether you're looking to enhance your cybersecurity, optimize your network infrastructure, or develop custom software solutions, our team of experts is here to help.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cybersecurity Section -->
+<section id="cybersecurity" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll" data-animation="fade-in">
+                <div class="about-img text-center">
+                    <img src="https://via.placeholder.com/600x400" alt="Cybersecurity Services" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll" data-animation="slide-up">
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h2 class="section-title">Cybersecurity</h2>
+                <p>In today's digital landscape, protecting your business from cyber threats is more important than ever. Our comprehensive cybersecurity solutions help safeguard your valuable data and systems from evolving threats.</p>
+                
+                <h4 class="mt-4">Our Cybersecurity Services Include:</h4>
+                <ul class="values-list mt-3">
+                    <li>Security Assessments and Audits</li>
+                    <li>Vulnerability Management</li>
+                    <li>Network Security Solutions</li>
+                    <li>Endpoint Protection</li>
+                    <li>Security Awareness Training</li>
+                    <li>Incident Response Planning</li>
+                    <li>24/7 Security Monitoring</li>
+                </ul>
+                
+                <p class="mt-4">Our team of certified security professionals uses the latest tools and methodologies to identify vulnerabilities, implement robust security measures, and continuously monitor your systems to prevent and mitigate security incidents.</p>
+                
+                <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">Get a Security Assessment</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Networking Section -->
+<section id="networking" class="section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0 animate-on-scroll" data-animation="fade-in">
+                <div class="about-img text-center">
+                    <img src="https://via.placeholder.com/600x400" alt="Networking Services" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1 animate-on-scroll" data-animation="slide-up">
+                <div class="service-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h2 class="section-title">Networking</h2>
+                <p>A reliable and efficient network infrastructure is the backbone of your business operations. Our networking solutions are designed to provide seamless connectivity, enhanced performance, and scalability to support your business growth.</p>
+                
+                <h4 class="mt-4">Our Networking Services Include:</h4>
+                <ul class="values-list mt-3">
+                    <li>Network Design and Implementation</li>
+                    <li>Wireless Network Solutions</li>
+                    <li>Network Monitoring and Management</li>
+                    <li>Cloud Networking</li>
+                    <li>VPN and Remote Access Solutions</li>
+                    <li>Network Security</li>
+                    <li>Network Troubleshooting and Optimization</li>
+                </ul>
+                
+                <p class="mt-4">Our team of networking experts works closely with you to understand your business requirements and design a network infrastructure that optimizes performance, enhances security, and supports your business objectives.</p>
+                
+                <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">Discuss Your Network Needs</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Software Development Section -->
+<section id="software" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll" data-animation="fade-in">
+                <div class="about-img text-center">
+                    <img src="https://via.placeholder.com/600x400" alt="Software Development Services" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll" data-animation="slide-up">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="section-title">Software Development</h2>
+                <p>Custom software solutions can give your business a competitive edge by addressing your specific needs and streamlining your operations. Our development team creates efficient, scalable, and user-friendly applications that help you achieve your business goals.</p>
+                
+                <h4 class="mt-4">Our Software Development Services Include:</h4>
+                <ul class="values-list mt-3">
+                    <li>Custom Application Development</li>
+                    <li>Web Application Development</li>
+                    <li>Mobile App Development</li>
+                    <li>Database Design and Development</li>
+                    <li>API Integration</li>
+                    <li>Software Maintenance and Support</li>
+                    <li>Quality Assurance and Testing</li>
+                </ul>
+                
+                <p class="mt-4">We follow a collaborative approach to software development, working closely with you throughout the development lifecycle to ensure that the final product aligns perfectly with your business requirements and delivers tangible value.</p>
+                
+                <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">Discuss Your Software Project</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Approach Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll" data-animation="fade-in">
+            <h2 class="section-title mx-auto">Our Approach</h2>
+            <p class="lead">How we work with you to deliver optimal technology solutions</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 animate-on-scroll" data-animation="slide-up">
+                <div class="services-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="services-title">1. Assessment</h3>
+                    <p>We begin by thoroughly understanding your business goals, current technology infrastructure, and specific challenges. This comprehensive assessment forms the foundation for our solution design.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4 animate-on-scroll" data-animation="slide-up">
+                <div class="services-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3 class="services-title">2. Strategy</h3>
+                    <p>Based on our assessment, we develop a strategic roadmap that outlines the technology solutions needed to address your challenges and achieve your business objectives.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4 animate-on-scroll" data-animation="slide-up">
+                <div class="services-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="services-title">3. Implementation</h3>
+                    <p>Our expert team deploys the solutions according to the approved strategy, ensuring minimal disruption to your business operations and thorough testing at every stage.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4 animate-on-scroll" data-animation="slide-up">
+                <div class="services-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="services-title">4. Optimization</h3>
+                    <p>We continuously monitor and optimize the implemented solutions, providing ongoing support and making improvements to ensure you get the maximum value from your technology investments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll" data-animation="fade-in">
+            <h2 class="section-title mx-auto">Client Success Stories</h2>
+            <p class="lead">How our services have helped businesses achieve their goals</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll" data-animation="slide-up">
+                <div class="services-card">
+                    <div class="mb-3">
+                        <i class="fas fa-quote-left fa-2x text-primary opacity-50"></i>
+                    </div>
+                    <p class="mb-4">After experiencing a security breach, we partnered with TechSolutions to overhaul our cybersecurity. Their comprehensive approach not only resolved our immediate issues but established a robust security framework that has protected us from numerous potential threats since.</p>
+                    <div class="d-flex align-items-center">
+                        <div class="ms-3">
+                            <h5 class="mb-0">Financial Services Company</h5>
+                            <p class="small text-muted mb-0">Cybersecurity Solution</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll" data-animation="slide-up">
+                <div class="services-card">
+                    <div class="mb-3">
+                        <i class="fas fa-quote-left fa-2x text-primary opacity-50"></i>
+                    </div>
+                    <p class="mb-4">TechSolutions redesigned our entire network infrastructure to support our rapid growth. The new system has significantly improved our connectivity, reduced downtime, and enabled seamless communication across our multiple locations.</p>
+                    <div class="d-flex align-items-center">
+                        <div class="ms-3">
+                            <h5 class="mb-0">Retail Chain</h5>
+                            <p class="small text-muted mb-0">Networking Solution</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll" data-animation="slide-up">
+                <div class="services-card">
+                    <div class="mb-3">
+                        <i class="fas fa-quote-left fa-2x text-primary opacity-50"></i>
+                    </div>
+                    <p class="mb-4">The custom inventory management software developed by TechSolutions has revolutionized our operations. The application streamlined our processes, reduced errors, and provided valuable analytics that have helped us optimize our inventory levels.</p>
+                    <div class="d-flex align-items-center">
+                        <div class="ms-3">
+                            <h5 class="mb-0">Manufacturing Company</h5>
+                            <p class="small text-muted mb-0">Software Development Solution</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-padding" style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+    <div class="container text-center text-white">
+        <h2 class="mb-4 animate-on-scroll" data-animation="fade-in">Ready to Transform Your Business with Technology?</h2>
+        <p class="lead mb-4 animate-on-scroll" data-animation="fade-in">Contact us today to discuss your technology needs and discover how our solutions can help your business thrive.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg animate-on-scroll" data-animation="fade-in">Request a Consultation</a>
+    </div>
+</section>
+{% endblock %}
